@@ -1,0 +1,111 @@
+/*
+    * MEDIA QUERIES
+*/
+
+
+// 1200px 
+@media (max-width: 1200px) {
+    .hero-banner .container .hero-banner-content {
+        .search input::placeholder{
+            font-size: 16px;
+        }
+    }
+
+    #homepage .types{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        a{
+            width: 100%;
+            &:nth-child(2){
+                margin: 2rem 0;
+            }
+        }
+    }
+}
+
+// 800px 
+@media (max-width: 800px) {
+    #homepage {
+        h1{
+            font-size: 1.8rem;
+        }
+        .how-it-works{
+            &-1, &-2, &-3{
+                // border: 1px solid red;
+                margin-top: 2rem;
+
+                > div{
+                    width: 100%;
+                    
+                    h2{
+                        margin: 1rem 0;
+                        font-size: 1.5rem;
+                    }
+                }
+                .hiw-img > img{
+                    width: 18rem;
+                }
+            }
+
+            &-1, &-3{
+                flex-direction: column-reverse;
+            }
+            &-2{
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+
+// HERO BANNER 
+
+
+// 600px
+@media (max-width: 600px) {
+    .hero-banner {
+        justify-content: center;
+        padding-bottom: 1.5rem;
+
+        .container .hero-banner-content{
+            width: 100%;
+            height: 50vh;
+
+            .title{
+                h2{
+                    margin: 2rem 0;
+                }
+
+                .slider h3 {
+                    font-size: 3rem;
+                }
+            } 
+
+            .search {
+                flex-direction: column;
+                .btn,
+                input {
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    } 
+}
+
+// 450px
+@media (max-width: 450px) {
+    .hero-banner {
+        .container .hero-banner-content .title{
+            h2{
+                font-size: 1.5rem;
+            }
+            .slider h3{
+                font-size: 2.2rem;
+            }
+        }
+    }
+}

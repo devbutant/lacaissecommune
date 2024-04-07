@@ -1,0 +1,139 @@
+.form{
+    margin: 2rem auto;
+    padding: 4rem 8rem;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(140, 140, 140, 0.352);
+    border-radius: .5rem;
+    background-color: $white;
+    flex-wrap: wrap;
+
+    .title-page{
+        width: 100%;
+        
+    }
+    
+    #namePot{
+        display: none;
+        background-color: $dark;
+        box-shadow: 0 0 5px $gray;
+        border-radius: 5px;
+        padding: 1rem;
+        color: $white;
+        font-size: 1.2rem;
+        .namePotValue{
+            font-weight: bold;
+        }
+    }
+}
+
+.informations{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+    
+    .form-group{
+        width: 45%;
+        margin: 1rem 0;
+
+        &:last-of-type{
+            display: flex;
+            align-items: flex-end;
+
+            //Button
+            & > .button-submit{
+                width: 100%;
+                margin: .5rem 0;
+            }
+        }
+    
+        label{
+            display: flex;
+        }
+
+        .dob{
+            width: 40%;
+        }
+    }
+
+    .form-checkbox {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1.1rem;
+        > .public {
+            -moz-appearance:none;
+            -webkit-appearance:none;
+            -o-appearance:none;
+            margin-right: .5rem; padding: 0;
+            border: .5px solid $gray;
+            box-shadow: 0 0 3px $dark;
+            width: 15px;
+            height: 15px;
+            min-width: 2px;
+            position: relative;
+            cursor: pointer;
+
+            &:checked::before{
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+                position: absolute;
+                font-weight: bold;
+                color: $dark;
+                content: '\2713';
+            }
+        }
+    }
+    
+    .button-submit{
+        justify-content: center;
+        
+        .btn{
+            width: 100%;
+    
+            &:hover{
+                cursor: pointer;
+                opacity: .9;
+            }
+        }
+    }
+    
+    .inscription{
+       height: 100%;
+       display: flex;
+       align-items: center;
+        a:hover{
+           text-decoration: underline;
+        }
+    }
+}
+
+/*
+    * MEDIA QUERIES
+*/
+
+
+// 1200px 
+@media (max-width: 1200px) {
+    .form{
+        padding: 2rem 4rem;
+        .informations .form-group .dob{
+            width: 100%;
+        }
+    }
+}
+
+// 800px 
+@media (max-width: 800px) {
+    .form{
+        padding: 1rem .5rem;
+        .informations{
+            margin-bottom: 0;
+            
+
+            .form-group{
+                width: 100%;
+            }
+        }
+    }
+}

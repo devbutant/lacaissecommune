@@ -1,0 +1,48 @@
+Cagnotte en ligne - La caisse commune
+type de cagnotte: cadeau commun, projet perso ou solidaire
+
+________
+
+Rôles : Gérant / participant(s)
+
+——
+
+Le gérant de la cagnotte doit s’incrire :
+-Nom
+-Prénom
+-Adresse e-mail
+-Numéro de téléphone
+-Mot de passe
+-Date de naissance
+-Rôle
+
+Pour créer une cagnotte :
+-Titre / Nom
+-Déscription
+-Date de début
+-Date de fin
+-Montant souhaité
+-Montant total (montant actuel, actualisé à chaque participation)
+
+Puis choisit le type de cagnotte souhaitée :
+-Libellé (Cadeau commun, projet solidaire, Dépense à plusieurs)
+
+En enfin la catégorie du type de cagnotte :
+-Libellé (Anniversaire, Pot de départ, Mariage, Naissance)
+
+Ça retournerait :
+
+-Je souhaite créer ma cagnotte pour : cagnotte.nom
+-Date de début : cagnotte.date_debut
+-Date de fin : cagnotte.date_fin
+-Crée par : utilisateur.prenom
+
+Le gérant pourra envoyer un lien pour accéder et participer à la cagnotte dont la route sera « /cagnotte/id.cagnotte »
+
+Les participants devront remplir un formulaire :
+- Nom, prénom, tel, e-mail, montant
+
+Payer via CB
+
+À la soumission du formulaire la table utilisateur et la colonne cagnotte.montant seront mis à jour
+

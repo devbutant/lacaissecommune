@@ -1,0 +1,91 @@
+    //Navbar 
+    body{
+        position: relative;
+    }
+    .big-container{
+        position: sticky;
+        top: 0;
+    }
+    .stik{
+        position: sticky;
+        top: 0;
+        z-index: 4;
+    }
+    .navbar{
+        height: 10vh;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        color: $white;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        a,
+        ul li{
+            align-items: center;
+            position: relative;
+
+            &::after {
+                content: "";
+                width: 0%;
+                height: 1.7px;
+                border-radius: 99px;
+                background: $orange;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transition: 0.3s ease;
+                }
+            &:hover::after {
+                width: 100%;
+            }
+
+            &:not(:first-of-type){
+                display: block;
+                margin-left: 2.8rem;
+            }
+        } 
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: auto;
+        }
+    }
+
+    .nav-bg{
+        background-color: $dark;
+        color: $white;
+        transition: all .5s;
+    }
+
+    .nav-transparent{
+        background-color: transparent;
+        color: white;
+        position: absolute;
+        top: 0; left: 50%;
+        transform: translateX(-50%);
+        transition: all .5s;
+    }
+
+    
+/*
+    * MEDIA QUERIES
+*/
+
+
+// 800px
+@media (max-width: 800px) {
+    .navbar ul li:not(:first-of-type),
+    .login-link{
+        display: none;
+    }
+
+    .toggle-btn{
+        display: block;
+    }
+}

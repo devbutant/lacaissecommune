@@ -1,0 +1,119 @@
+//HOMEPAGE
+
+#homepage{
+    width: 100%;
+    // .btn{
+    //     height: 100%;
+    // }
+}
+
+// Hero-banner
+.hero-banner{
+    height: 85vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.653), rgba(0, 0, 0, 0.153)),
+                    url('../img/friends.jpg') no-repeat center/cover;
+    color: $white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0px 0px 10px $dark;
+    
+    .container .hero-banner-content{
+        margin: 0 auto;
+        width: 35rem;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .title{
+            text-align: center;
+            font-family: 'PT Sans', sans-serif;
+            margin-bottom: 5rem;
+
+            h2{
+                font-size: 1.9rem;
+                margin-bottom: 1.5rem;
+                text-transform: uppercase;
+                letter-spacing: .2rem;
+            }
+        }
+
+        .search{
+            display: flex;
+            justify-content: space-between;
+            height: 45px;
+
+            input{
+                min-height: 100%;
+                width: calc(100% - 7rem);
+                padding: 0 .85rem;
+                border-radius: .3rem;
+                box-shadow: 0px 0px 20px $gray;
+
+                &::placeholder{
+                    color: $gray;
+                }
+            }
+
+            .btn{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100%;
+                font-size: 1rem;
+                background-color: $orange;
+                color: $white;
+                box-shadow: 0px 0px 20px $gray;
+            }
+        }
+    }
+} 
+// End Hero-banner 
+
+#homepage {
+    .how-it-works{
+        &-1,
+        &-2,
+        &-3{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    .hiw-img{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 40%;
+        margin: 3rem 0;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .hiw-description{
+        width: 55%;
+
+        h2{
+            margin-bottom: 1rem;
+            color: $black;
+        }
+    }
+
+    .types{
+        a{
+            margin-bottom: 2rem 0;
+            width: 80%;
+        }
+        // img{
+        //     border: 1px solid red;
+        //     width: 50px;
+        // }
+    }
+}

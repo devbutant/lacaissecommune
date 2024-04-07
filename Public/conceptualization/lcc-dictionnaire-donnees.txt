@@ -1,0 +1,110 @@
+Dictionnaire de données 
+
+Nom : id_u
+Code : ID_U
+Type : AUTO_INCREMENT
+Taille : ,
+Commentaire : 
+
+Nom : nom_u
+Code : NOM_U
+Type : VARCHAR
+Taille : 255,
+Commentaire : 
+
+Nom : prenom_u
+Code : PRENOM_U
+Type : VARCHAR
+Taille : 255,
+Commentaire : 
+
+Nom : email_u
+Code : EMAIL_U
+Type : VARCHAR
+Taille : 255,
+Commentaire : 
+
+Nom : tel_u
+Code : TEL_U
+Type : INT
+Taille : 20,
+Commentaire : 
+
+Nom : date_naiss_u
+Code : DATE_NAISS_U
+Type : DATE
+Taille : ,
+Commentaire : 
+
+Nom : id_cgt
+Code : ID_CGT
+Type : AUTO_INCREMENT
+Taille : ,
+Commentaire : 
+
+Nom : nom_cgt
+Code : NOM_CGT
+Type : VARCHAR
+Taille : 255,
+Commentaire : 
+
+Nom : description_cgt
+Code : DESCRIPTION_CGT
+Type : VARCHAR
+Taille : 255,
+Commentaire : 
+
+Nom : date_debut_cgt
+Code : DATE_DEBUT_CGT
+Type : DATE
+Taille : ,
+Commentaire : 
+
+Nom : date_fin_cgt
+Code : DATE_FIN_CGT
+Type : DATE
+Taille : ,
+Commentaire : 
+
+Nom : total_cgt
+Code : TOTAL_CGT
+Type : MONEY
+Taille : ,
+Commentaire : 
+
+Nom : plafond_cgt
+Code : PLAFOND_CGT
+Type : MONEY
+Taille : ,
+Commentaire : 
+
+Nom : id_typ
+Code : id
+Type : AUTO_INCREMENT
+Taille : ,
+Commentaire : 
+
+Nom : libelle_typ
+Code : LIBELLE_TP
+Type : VARCHAR
+Taille : 255,
+Commentaire : 
+
+Nom : id_cat
+Code : ID_CAT
+Type : AUTO_INCREMENT
+Taille : ,
+Commentaire : 
+
+Nom : libelle_cat
+Code : LIBELLE_CAT
+Type : VARCHAR
+Taille : 255,
+Commentaire : 
+
+Nom : role_u
+Code : ROLE_U
+Type : BOOL
+Taille : ,
+Commentaire : 
+

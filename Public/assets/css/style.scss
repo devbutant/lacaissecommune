@@ -1,0 +1,24 @@
+//Abstract
+@import 'abstracts/variables';
+@import 'abstracts/general';
+@import 'abstracts/typography';
+@import 'abstracts/specificityScss';
+
+//Pages 
+@import 'pages/homepage';
+@import 'pages/create-pot';
+@import 'pages/login-register';
+@import 'pages/single-pot';
+@import 'pages/users';
+
+//Components
+@import 'components/button';
+@import 'components/navbar';
+@import 'components/hamburger-menu';
+@import 'components/slideShow';
+@import 'components/footer';
+
+//Responsive 
+@import 'pages/homepage-responsive';
+@import 'pages/create-pot-responsive';
+@import 'pages/single-pot-responsive';

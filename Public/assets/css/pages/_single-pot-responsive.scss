@@ -1,0 +1,38 @@
+@media (max-width: 1000px) {
+    .pot-infos{
+        top: 0;
+        max-height: 100vh;
+
+        .contributions-infos{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .pot-infos{
+        position: initial;
+    }
+
+    .single-pot-content{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .total{
+        display: flex;
+        flex-direction: column;
+    }
+    .pot-stats {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .contributions-infos{
+            margin: 0;
+            .infos{
+                width: auto;
+            }
+        }
+    }
+}

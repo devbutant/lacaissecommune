@@ -1,0 +1,239 @@
+.single-pot-content{
+    margin: 4rem 0;
+    border-radius: .4rem;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+}
+
+.wrapper-1 {
+    grid-column: 1 / 4;
+    display: grid;
+    grid-gap: 1rem;
+
+    > div{
+        box-shadow: 0 0 10px $light-gray;
+        background-color: $white;
+    }
+
+    .one {
+        grid-column: 1 / 3;
+        grid-row: 1/3;
+    }
+    
+    .two {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+    }
+    
+    .three {
+        grid-column: 1/3;
+        grid-row: 4 / 5;
+    }
+}
+
+.pot-image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    flex-direction: column;
+    background-color: rgb(236, 199, 255);
+
+    .img-container{
+        height: 30rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $light-gray;
+
+        img{
+            max-height: 90%;
+            max-width: 90%;
+            overflow: hidden;
+            max-width: 100%;
+            box-sizing: border-box;
+            align-items: center;
+        } 
+    }
+     
+    .pot-introduction{
+        padding: 1.5rem 2rem;
+        .pot-title{
+            width: 100%;
+            font-weight: bold;
+            display: flex;
+        }   
+    }
+}
+
+// Comments 
+.pot-comments{
+    padding: 1.5rem 2rem;
+    max-height: 50vh;
+    overflow: scroll;
+    
+    .comment-content{
+        display: flex;
+        
+        &:not(:last-of-type){
+            margin-bottom: 1rem;
+        }
+
+        .comment-img{
+            margin-right: 1rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: $light-gray;
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img{
+                width: 100%;
+                max-height: 90%;
+            }
+        }
+
+        .comment-all{
+            display: flex;
+            flex-direction: column;
+            
+            .name{
+                font-size: 1.2rem;
+                color: $dark-gray;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// Notifications contributions
+.notif-contributions{
+    // padding: 1.5rem 2rem;
+    // max-height: 50vh;
+    // overflow: scroll;
+    @extend .pot-comments;
+
+    .contribution{
+        display: flex;
+        flex-direction: column;
+
+        &:not(:last-of-type){
+            margin-bottom: 1rem;
+        }
+
+        .contribution-sum{
+            color: $orange;
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: flex;
+        }
+        .date,
+        .nb-contribution,
+        .name{
+            font-weight: bold;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+    }
+}
+
+// Pot informations 
+.pot-infos{
+    max-height: 80vh;
+    position: sticky;
+    top: 10vh;
+    margin-bottom: 4rem;
+    grid-column: 4 / 6;
+
+    > div{
+        box-shadow: 0 0 10px $light-gray;
+        padding: 1rem 2rem;
+        background-color: $white;
+    }
+}
+.pot-type{
+    display: block;
+    padding: .5rem 1rem;
+    border-radius: .5rem .5rem  0 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+// Infos content 
+.infos-content{
+    margin-bottom: 1rem;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    hr{
+        margin: 2rem 0;
+    }
+    .total{
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: .5rem 0;
+        
+        .sum-total{
+            font-size: 3rem;
+        }
+    }
+
+    .contributions-infos{
+        margin-top : 2rem;
+        display: flex;
+        // justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+
+        .infos{
+            width: 48%;
+
+            .value {
+                display: block;
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .btn-contributions a{
+        margin-top: 1rem;
+        display: block;
+    }
+}
+
+.organization{
+    height: 200px;
+    text-align: center;
+
+    .organization-content{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .org-name{
+            font-weight: bold;
+            padding: .5rem;
+        }
+
+        hr{
+            width: 100%;
+            margin: 1rem 0;
+        }
+    }
+}
