@@ -73,26 +73,42 @@ class UserController extends AbstractController{
 
     public function pot($data){
         $pot = new Pot();
-        $photoPot = SecurityController::checkImg();
 
-        // Ternary condition 
-        ($photoPot) ?  $data['photo'] = $_FILES['photo']['name'] : null;
-        $pot->setId($data['id']);
-        $pot->setIdType(2);
+    // Attribution des valeurs si elles sont présentes et non vides
+    if (isset($data['name']) && !empty($data['name'])) {
         $pot->setName($data['name']);
-        $pot->setDescription($data['description']);
-        $pot->setPhoto($data['photo']);
-        $pot->setSumLimit($data['sum_limit']);
-        $pot->setRecipient($data['recipient']);
-        $pot->setOrganizer($data['organizer']);
-        $pot->setDateStart($data['date_start']);
-        $pot->setDateEnd($data['date_end']);
-        $pot->setPublic($data['public']);
-        $pot->setTotal($data['total']);
-        $pot->setSlug($data['slug']);
-
-        return $pot;
     }
+    if (isset($data['description']) && !empty($data['description'])) {
+        $pot->setDescription($data['description']);
+    }
+    if (isset($data['sum_limit']) && !empty($data['sum_limit'])) {
+        $pot->setSumLimit($data['sum_limit']);
+    }
+    if (isset($data['recipient']) && !empty($data['recipient'])) {
+        $pot->setRecipient($data['recipient']);
+    }
+    if (isset($data['organizer']) && !empty($data['organizer'])) {
+        $pot->setOrganizer($data['organizer']);
+    }
+    if (isset($data['date_start']) && !empty($data['date_start'])) {
+        $pot->setDateStart($data['date_start']);
+    }
+    if (isset($data['date_end']) && !empty($data['date_end'])) {
+        $pot->setDateEnd($data['date_end']);
+    }
+    if (isset($data['public']) && !empty($data['public'])) {
+        $pot->setPublic($data['public']);
+    }
+    if (isset($data['total']) && !empty($data['total'])) {
+        $pot->setTotal($data['total']);
+    }
+    if (isset($data['slug']) && !empty($data['slug'])) {
+        $pot->setSlug($data['slug']);
+    }
+
+    // Retourner l'objet Pot
+    return $pot;
+}
 
     public function logout(){
         unset($_SESSION['user']);

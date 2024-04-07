@@ -13,13 +13,13 @@ class ContributorManager extends Manager{
     public function getComments($id){
 
         $resultat = $this->getDb()->prepare(
-            "SELECT DISTINCT u.pseudo, u.photo, c.sum, c.comment, c.date
+            "SELECT DISTINCT u.fname, u.photo, c.sum, c.comment, c.date
             FROM contribute c
-            JOIN pot p
-            ON p.id = c.id_pot
-            JOIN user u
-            ON c.id_user = u.id
-            WHERE c.id_pot = ?
+            JOIN pots p
+            ON p.id_pots = c.id_pots
+            JOIN users u
+            ON c.id_contributor = u.id_user
+            WHERE c.id_pots = ?
             ORDER BY c.date DESC"
         );
         $params = [$id];

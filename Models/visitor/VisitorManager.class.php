@@ -18,21 +18,21 @@ class VisitorManager extends Manager{
         $resultat = $this->getDb()->prepare('SELECT * FROM pots 
         WHERE slug 
         LIKE ?
-        AND id = ?');
+        AND id_pots = ?');
         $params = [$slug, $id];
         $resultat->execute($params);
 
         while($ligne = $resultat->fetch()){
 
             $pot = new Pot();
-            $pot->setId($ligne['id']);
+            $pot->setId($ligne['id_pots']);
             $pot->setIdType($ligne['id_type']);
             $pot->setName($ligne['name']);
             $pot->setDescription($ligne['description']);
             $pot->setPhoto($ligne['photo']);
             $pot->setSumLimit($ligne['sum_limit']);
             $pot->setRecipient($ligne['recipient']);
-            $pot->setOrganizer($ligne['id_organizer']);
+            $pot->setOrganizer($ligne['organizer']);
             $pot->setDateStart($ligne['date_start']);
             $pot->setDateEnd($ligne['date_end']);
             $pot->setPublic($ligne['public']);
@@ -42,7 +42,7 @@ class VisitorManager extends Manager{
         } 
         $resultat->closeCursor();
 
-        return ($pots) ? $pots : null;
+        return ($pots) ? $pots : [];
     }
 
     // Get pot types 
@@ -121,7 +121,7 @@ class VisitorManager extends Manager{
 
         $sql = 
             'SELECT id, name 
-            FROM pot
+            FROM pots
             WHERE id = ?';
 
         $result = $this->getDb()->prepare($sql);

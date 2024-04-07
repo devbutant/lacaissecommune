@@ -72,7 +72,7 @@ class UserManager extends Manager{
     // Add pot
     public function addPot(Pot $ent){
 
-        $sql = "INSERT INTO pot (id_type, name, description, photo, sum_limit, recipient, id_organizer, date_start, date_end, public, total, slug) 
+        $sql = "INSERT INTO pots (id_type, name, description, photo, sum_limit, recipient, organizer, date_start, date_end, public, total, slug) 
                 VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
             
                 -- INSERT INTO conceive(id_pots, id_user)
@@ -83,7 +83,8 @@ class UserManager extends Manager{
             $ent->getIdType(),
             $ent->getName(),
             $ent->getDescription(),
-            $ent->getPhoto(),
+            // $ent->getPhoto(),
+            "anniversaire.jpg",
             $ent->getSumLimit(),
             $ent->getRecipient(),
             // Organizer
@@ -108,7 +109,7 @@ class UserManager extends Manager{
     public function getMyPots($id){
         $sql = 'SELECT *
         FROM pots
-        WHERE id_organizer = ?
+        WHERE organizer = ?
         ORDER BY date_start DESC';
 
         $result = $this->getDb()->prepare($sql);
@@ -118,7 +119,7 @@ class UserManager extends Manager{
 
         while($row = $result->fetch()){
             $pot = new Pot();
-            $pot->setId($row['id']);
+            $pot->setId($row['id_pots']);
             $pot->setName($row['name']);
             $pot->setPhoto($row['photo']);
             $pot->setSlug($row['slug']);
@@ -158,7 +159,7 @@ class UserManager extends Manager{
     // Get user by name 
     public function getUsers(){
 
-        $resultat = $this->getDb()->prepare('SELECT * FROM user');
+        $resultat = $this->getDb()->prepare('SELECT * FROM users');
         $params = [];
         $resultat->execute($params);
 

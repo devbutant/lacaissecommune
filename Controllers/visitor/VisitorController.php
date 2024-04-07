@@ -125,7 +125,7 @@ class VisitorController extends AbstractController{
             'comments' => $comments,
             'view' => 'Views/visitor/single-pot.view.php'
         ];
-        $this->genererPage($data);      
+        $this->genererPage($data);
     }
 
     // Form contribution
